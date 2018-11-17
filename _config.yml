@@ -1,0 +1,18 @@
+### GENERAL SETTINGS ###
+
+# Site settings
+title: Arxiv Catalog
+description: "A catalog of equations from Arxiv, from 2001 to 2018"
+baseurl: "/arxiv-catalog" #important: start with /
+url: ""
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title
+excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
+
+# Making projects separate from posts
+collections:
+  topics:
+    output: true
+    permalink: /topic/:title/

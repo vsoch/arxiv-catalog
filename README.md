@@ -8,11 +8,16 @@ categories, along with the rendered equations. For some future version,
 we will go one step further and make these equations into pretty images
 using [penrose](https://www.github.com/penrose/penrose).
 
-## Summary Pages
+## Collections
 
+Each summary page I will represent as a collection, in the folder topics.
 The input data to generate a table of summary metrics, organized with category in
-rows and metric in columns, was created [by this script]() and organized here.
-The remaining steps included:
+rows and metric in columns, was created [by this script](), and then
+the script to generate the yaml front end matter to parse into the collection
+is [here]().
 
- 1. [Generate]() a catalog calendar page to find papers by month and year within each category.
- 2. [Generate](generatePage.py) a html/css page to link to the calendar page for the equations in a given article.
+## Item Pages
+The remaining content (the posts) includes all (N=?) of the individual articles in
+the arxiv dump, each of which falls into one of the collections above. The script
+[Generate](generatePage.py) was used to generate the yaml front end matter that
+renders into the html/css page for a given article.
