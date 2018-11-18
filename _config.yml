@@ -4,6 +4,7 @@
 title: Arxiv Catalog
 description: "A catalog of equations from Arxiv, from 2001 to 2018"
 baseurl: "/arxiv-catalog" #important: start with /
+repo: "https://www.github.com/vsoch/arxiv-catalog"
 url: ""
 
 # Build settings
