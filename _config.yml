@@ -8,11 +8,31 @@ url: ""
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:title
+permalink: /:categories/:title/
 excerpt_separator: <!--more--> #use this in posts to define how long the excerpt of the post (that is shown on the Blog page) is
 
 # Making projects separate from posts
 collections:
   topics:
     output: true
-    permalink: /topic/:title/
+    permalink: /:collection/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "pages"
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude: [".git", "README.md", "LICENSE.md", "_site", "article-template.md",'topic-template.md', "*.py"]
+

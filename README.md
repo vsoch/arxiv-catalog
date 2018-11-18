@@ -8,6 +8,9 @@ categories, along with the rendered equations. For some future version,
 we will go one step further and make these equations into pretty images
 using [penrose](https://www.github.com/penrose/penrose).
 
+## Catalog Cover Page
+It might be interesting to show some animation of [equation families over time](https://codepen.io/golle404/pen/jWZpoy).
+
 ## Collections
 
 Each summary page I will represent as a collection, in the folder topics.
