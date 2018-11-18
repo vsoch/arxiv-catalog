@@ -7,6 +7,11 @@ h2.mdl-card__title-text {
    background: rgb(255,171,64);
 }
 
+.title {
+    font-variant: all-small-caps;
+    color: #CCC;
+}
+
 .demo-card-square.mdl-card {
     width: 320px;
     height: 320px;
