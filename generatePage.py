@@ -4,7 +4,8 @@
 # equations from an article, and general yaml (with front end matter) to
 # render into a page.
 
-import pkl
+import pickle
+import operator
 import frontmatter
 
 input_pkl = sys.argv[1]
@@ -63,7 +64,15 @@ for e in raw:
         equations[e] = 0
     equations[e] +=1
 
-template.metadata['equations'] = equations
+# Ensure is sorted
+equation_list = []
+for item in sorted(equations.items(), key=operator.itemgetter(1)):
+    equation_list.append({'equation': item[0], 'count': item[1]})
+
+# Greatest to least
+equation_list.reverse()
+
+template.metadata['equations'] = equation_list
 
 # Write to File
 outfile = os.path.join('_posts', '%s.md' %result['uid'].replace('/','-'))
