@@ -20,7 +20,7 @@ body,
 }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono' !important;
   color: #313131;
   background: #ecf0f1;
 }
