@@ -54,10 +54,18 @@ template.metadata['length'] = result['metadata']['length']
 template.metadata['arxiv_url'] = result['metadata']['arxiv_url']
 
 # Equations
-equations =  [e.replace('\\\\','\\') for e in result['equations']]
+raw =  [e.replace('\\\\','\\') for e in result['equations']]
+
+# Let's count instead
+equations = dict()
+for e in raw:
+    if e not in equations:
+        equations[e] = 0
+    equations[e] +=1
+
 template.metadata['equations'] = equations
 
 # Write to File
 outfile = os.path.join('_posts', '%s.md' %result['uid'].replace('/','-'))
 with open(outfile, 'w') as filey:
-    frontmatter.dump(post, filey) 
+    filey.writelines(frontmatter.dumps(template))
